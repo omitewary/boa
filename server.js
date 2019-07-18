@@ -8,6 +8,9 @@ connectDB();
 
 app.get("/", (req, res) => res.send("API running"));
 
+//Define routes
+app.use("/api/securities", require("./routes/api/securities.route"));
+
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
